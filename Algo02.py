@@ -1,22 +1,22 @@
-#recursive function 
-def func(num):
+# #recursive function 
+# def func(num):
     
-    #base case
-    if num == 1:
-        return 1
+#     #base case
+#     if num == 1:
+#         return 1
     
-    #recursive case
-    else:
-        return num + func(num-1)
+#     #recursive case
+#     else:
+#         return num + func(num-1)
     
-#main program
-while True:
-    num = int(input("Enter a Number: "))
+# #main program
+# while True:
+#     num = int(input("Enter a Number: "))
 
-    if num == -1:
-        break
-    else:
-        print("Output:", func(num))
+#     if num == -1:
+#         break
+#     else:
+#         print("Output:", func(num))
 
 
 
@@ -42,20 +42,57 @@ multiplication of numbers as output.
 d) Use the loop to run the program and display the correct output until user input -1. 
 """	
 
-def Multiply (M,n):
-    if (n == 1):
-        return M
+# def Multiply (M,n):
+#     if (n == 1):
+#         return M
+#     else:
+#         return M + Multiply(M, n-1)
+
+# while True:  
+#     M = int(input("Enter the first number: "))
+#     n = int(input("Enter the second number: "))
+
+#     if n == -1:
+#         break
+#     else:
+#         print("The product of", M, "and", n, "is", Multiply(M,n))
+
+
+
+"""Consider the following recursive sequence of numbers: 
+ 
+2,1,0.5,0.25,0.125. . . . 
+ 
+a) Design a recursive Python function to produce the above output when a user 
+enters an integer from the keyboard. 
+b) Use the loop to run the program and display the correct output until user input -1. 
+c) Sample Output: 
+ 
+Enter number:1 
+Output:2 
+Enter number:2 
+Output:1 
+Enter number:3 
+Output:0.5 
+Enter number: -1 
+Output: Finished"""
+
+
+def sequence(x):
+    if x == 1:
+        return 2
     else:
-        return M + Multiply(M, n-1)
+        return sequence(x-1)/2	
+    
+while True:
 
-while True:  
-    M = int(input("Enter the first number: "))
-    n = int(input("Enter the second number: "))
+    x = int(input("Enter a Number: "))
 
-    if n == -1:
+    if x == -1:
+        print("Output: Finished")
         break
     else:
-        print("The product of", M, "and", n, "is", Multiply(M,n))
+        print("Output:", sequence(x))
 
 
 
