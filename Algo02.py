@@ -78,22 +78,38 @@ Enter number: -1
 Output: Finished"""
 
 
-def sequence(x):
-    if x == 1:
-        return 2
-    else:
-        return sequence(x-1)/2	
+# def sequence(x):
+#     if x == 1:
+#         return 2
+#     else:
+#         return sequence(x-1)/2	
     
+# while True:
+
+#     x = int(input("Enter a Number: "))
+
+#     if x == -1:
+#         print("Output: Finished")
+#         break
+#     else:
+#         print("Output:", sequence(x))
+
+
+def seq(n):
+    if n == 1:
+        return 1
+    else:
+        return seq( n - 1) + (n - 1)
+
 while True:
 
-    x = int(input("Enter a Number: "))
-
-    if x == -1:
+    n = int(input("Enter number:"))
+    
+    if n == -1:
         print("Output: Finished")
         break
     else:
-        print("Output:", sequence(x))
-
+        print("Output:",seq(n))
 
 
 
