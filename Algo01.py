@@ -67,3 +67,28 @@ print("Median Is : ",findMedian(A))
 
 
 
+#BUBBLE SORT ALGORITHS
+
+def bubbleSort(B):
+    for i in range (len(B)):
+        for j in range (i+1, len(B)):
+            if B[i] > B[j]:
+                B[i],B[j] = B[j],B[i]
+
+B = []
+
+for a in range (1 , 9):
+    B.append(int(input(f"Enter your input no.{a}: ")))
+
+print("Befor Sorting: ",B)
+
+bubbleSort(B)
+
+print("After Sorting:",B)
+
+
+
+
+
+
+
